@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target 'sinaDemo' do
+    pod 'Alamofire', '~> 4.4'
+    pod 'Kingfisher'
+    pod 'SnapKit'
+    pod 'SwiftyJSON'
+    pod 'JXPhotoBrowser'
+    pod 'AFNetworking'
+    pod 'BaiduMapKit'
+end
