@@ -35,9 +35,12 @@ class LCOnLinePlayerDetailController: UIViewController {
         super.viewWillAppear(true)
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.hideBottomHairline()
+        
+              
+        
     }
     
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,7 +154,9 @@ extension LCOnLinePlayerDetailController:UITableViewDelegate,UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+       
+        QQMusicOperationTool.shareInstance.pauseCurrentMusic()
+//        middleView.foreImageView.layer.pauseAnimate()
         
         let interfaceVC = LCOnLinePlayerInterfaceController()
         interfaceVC.listModel = self.listArray[indexPath.row]

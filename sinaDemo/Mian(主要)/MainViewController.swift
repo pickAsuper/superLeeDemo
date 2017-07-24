@@ -12,6 +12,8 @@ class MainViewController: UITabBarController ,LCNewTabBarDelegate{
     
     weak var customTabBar = LCNewTabBar()
     
+    let tools =  OnLineMePlayerTool()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +77,10 @@ class MainViewController: UITabBarController ,LCNewTabBarDelegate{
     // 中间按钮的点击事件
     func plusBtnOnClicl() {
     
- 
+
+      NotificationCenter.default.post(name:NSNotification.Name(rawValue: "stopMusic"), object: nil);
+        
+        
       let mes = QQMessageTableViewController()
       let nav = LCNavigationController.init(rootViewController: mes);
         

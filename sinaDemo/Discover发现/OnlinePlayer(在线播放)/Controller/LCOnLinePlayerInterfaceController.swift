@@ -64,7 +64,20 @@ class LCOnLinePlayerInterfaceController: UIViewController {
         return bottomView
     }()
   
- 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(stopMusic), name: NSNotification.Name(rawValue: "stopMusic"), object: nil);
+
+        
+    }
+    
+    func stopMusic()  {
+        self.tools.pauseMusic()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
